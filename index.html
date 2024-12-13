@@ -10,120 +10,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <!-- Навигация -->
-    <nav class="navbar">
-        <div class="container navbar-container">
-            <div class="logo">
-                <img src="img/logo.svg" alt="Логотип">
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-logo">
+                <img src="img/logo.svg" alt="logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#features">Преимущества</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-            <a href="https://t.me/ваш-канал" class="btn-telegram" target="_blank">Подписаться</a>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Советы</a></li>
+                    <li><a href="#">О канале</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <!-- <div class="header-address">г. Москва, ул. Примерная, д. 1</div> -->
+                <a href="#" class="btn-outline">Подписаться</a>
+            </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Header -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <!-- Левая колонка с фото -->
-                <div class="hero-image" data-parallax>
-                    <img src="img/photo_2.png" alt="Доктор">
-                </div>
-                <!-- Правая колонка с текстом -->
-                <div class="hero-text">
-                    <h1>Добро пожаловать!</h1>
-                    <p>Слоган, который подчеркивает вашу уникальность.</p>
-                    <a href="#about" class="btn-primary">Подробнее обо мне</a>
-                </div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <p class="subheading">Освободите себя от стресса, тревоги и эмоциональной усталости!</p>
+                <h1>Даниил<br>Соловьёв</h1>
+                <p class="hero-description">
+                    Авторский канал <span>врача-психиатра</span> и <span>психотерапевта</span> для тех, кто хочет улучшить своё психологическое состояние
+                </p>
+                <a href="#" class="btn-primary">Узнать больше</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero.png" alt="Даниил Соловьёв">
             </div>
         </div>
     </section>
 
-    <!-- Обо мне -->
-    <section id="about" class="about">
+    <section class="interest">
         <div class="container">
-            <h2>Обо мне</h2>
-            <p>Я - [Ваше Имя], профессионал в [ваша область]. Мои курсы помогут вам достичь новых высот! Я - [Ваше Имя], профессионал в [ваша область]. Мои курсы помогут вам достичь новых высот! Я - [Ваше Имя], профессионал в [ваша область]. Мои курсы помогут вам достичь новых высот! Я - [Ваше Имя], профессионал в [ваша область]. Мои курсы помогут вам достичь новых высот! Я - [Ваше Имя], профессионал в [ваша область]. Мои курсы помогут вам достичь новых высот!</p>
-        </div>
-    </section>
-
-    <!-- Преимущества -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="feature">
-                <h3>Профессиональный подход</h3>
-                <p>Легкость в изучении благодаря проверенным методам.</p>
-            </div>
-            <div class="feature">
-                <h3>Уникальные материалы</h3>
-                <p>Все необходимые ресурсы собраны в одном месте.</p>
-            </div>
-            <div class="feature">
-                <h3>Удобство обучения</h3>
-                <p>Гибкий график, подходящий именно вам.</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Призыв к действию -->
-    <section id="cta" class="cta">
-        <div class="container">
-            <h2>Присоединяйтесь к нашему Telegram!</h2>
-            <a href="https://t.me/ваш-канал" class="cta-button" target="_blank">Подписаться сейчас</a>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="contact-wrapper">
-                <!-- Левая колонка -->
-                <div class="contact-info">
-                    <div class="text-block">
-                        <h2>Свяжитесь с нами</h2>
-                        <p>Переходите к действиям. Мы всегда готовы помочь вам решить ваши задачи!</p>
+            <h2 class="section-title">О чём канал?</h2>
+            <div class="interest-grid">
+                <!-- Карточка 1 -->
+                <div class="interest-card">
+                    <div class="icon">
+                        <img src="img/interest/icon_1.png" alt="Управление тревогой и стрессом">
                     </div>
-                    <div class="photo-block">
-                        <img src="img/photo.jpg" alt="Фото">
+                    <p>Как справляться с тревогой, стрессом и выгоранием</p>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="interest-card">
+                    <div class="icon">
+                        <img src="img/interest/icon_2.png" alt="Техники саморегуляции">
                     </div>
+                    <p>Техники саморегуляции и управления эмоциями</p>
                 </div>
-
-                <!-- Правая колонка -->
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder=" " required>
-                            <label for="name">Имя</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder=" " required>
-                            <label for="phone">Телефон</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder=" " required>
-                            <label for="email">Email</label>
-                        </div>
-                        <button type="submit">Оставить заявку</button>
-                    </form>
+                <!-- Карточка 3 -->
+                <div class="interest-card">
+                    <div class="icon">
+                        <img src="img/interest/icon_3.png" alt="Понимание психологических процессов">
+                    </div>
+                    <p>Простые объяснения сложных психологических процессов</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-
-    <!-- Подвал -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Ваше Имя. Все права защищены. | <a href="#">Политика конфиденциальности</a></p>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
