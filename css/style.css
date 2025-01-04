@@ -71,13 +71,6 @@ body {
   opacity: 0.3;
   z-index: 0;
 }
-.hero::after {
-  background-color: #333;
-  width: 1000px;
-  height: 1000px;
-  bottom: -300px;
-  right: -100px;
-}
 .hero .hero-container {
   position: relative;
   display: flex;
@@ -93,6 +86,7 @@ body {
   max-width: 50%;
 }
 .hero .hero-container .hero-text .subheading {
+  display: inline-block;
   font-size: 1.2rem;
   color: rgb(45.2173913043, 123.4782608696, 194.7826086957);
   margin-bottom: 10px;
@@ -102,7 +96,7 @@ body {
 .hero .hero-container .hero-text .subheading::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 100%;
   height: 2px;
   background-color: #1a4770;
   margin-top: 10px;
@@ -114,7 +108,7 @@ body {
   line-height: 1;
 }
 .hero .hero-container .hero-text .hero-description {
-  font-size: 1.1rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 50px;
 }
@@ -150,7 +144,8 @@ body {
 
 .interest {
   background-color: #C9E3F2;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 .interest .container {
   max-width: 1200px;
@@ -223,6 +218,162 @@ body {
   color: #333;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.psychiatry {
+  background-color: #C9E3F2;
+  padding: 50px 0;
+}
+.psychiatry .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.psychiatry .section-title {
+  color: #1a4770;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+.psychiatry .section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #1a4770;
+  margin: 10px auto 0;
+}
+.psychiatry .psychiatry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.psychiatry .psychiatry-card {
+  background-color: #ffffff;
+  border: 1px solid #C9E3F2;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.psychiatry .psychiatry-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1a4770;
+}
+.psychiatry .psychiatry-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+}
+.psychiatry .psychiatry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-me {
+  background-color: #EEE8E4;
+  color: #333;
+  padding: 60px 0;
+}
+.about-me .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.about-me .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1a4770;
+}
+.about-me .section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #1a4770;
+  margin: 10px auto 0;
+}
+.about-me .about-me-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.about-me .about-me-content .about-me-left,
+.about-me .about-me-content .about-me-right {
+  flex: 1;
+  padding: 15px;
+}
+.about-me .about-me-content .about-me-left h3,
+.about-me .about-me-content .about-me-right h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #1a4770;
+}
+.about-me .about-me-content .about-me-left p,
+.about-me .about-me-content .about-me-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.about-me .about-me-content .about-me-photo {
+  flex: 0 0 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me .about-me-content .about-me-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -20px;
+  transform: scale(1.4);
+  transition: transform 0.3s ease;
+}
+.about-me .about-me-content .about-me-photo:hover img {
+  transform: scale(1.65);
+}
+.about-me .about-me-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.about-me .about-me-details div {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.about-me .about-me-details div h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #1a4770;
+}
+.about-me .about-me-details div p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+.about-me .about-me-details div strong {
+  color: #1a4770;
 }
 
 /*# sourceMappingURL=style.css.map */

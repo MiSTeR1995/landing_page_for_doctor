@@ -96,13 +96,13 @@ body {
     }
 
     // круг (добавляем темно-серый)
-    &::after {
-        background-color: $dark-gray;
-        width: 1000px;
-        height: 1000px;
-        bottom: -300px;
-        right: -100px;
-    }
+    // &::after {
+    //     background-color: $dark-gray;
+    //     width: 1000px;
+    //     height: 1000px;
+    //     bottom: -400px;
+    //     right: -100px;
+    // }
 
     .hero-container {
         position: relative;
@@ -119,6 +119,7 @@ body {
             max-width: 50%;
 
             .subheading {
+                display: inline-block;
                 font-size: 1.2rem;
                 color: color.adjust($primary-color, $lightness: 20%);
                 margin-bottom: 10px;
@@ -128,7 +129,7 @@ body {
                 &::after {
                     content: "";
                     display: block;
-                    width: 50px;
+                    width: 100%;
                     height: 2px;
                     background-color: $primary-color;
                     margin-top: 10px;
@@ -143,7 +144,7 @@ body {
             }
 
             .hero-description {
-                font-size: 1.1rem;
+                font-size: 2rem;
                 color: $dark-gray;
                 margin-bottom: 50px;
 
@@ -188,7 +189,8 @@ body {
 // Interest блок
 .interest {
     background-color: $secondary-color;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
 
     .container {
         max-width: 1200px;
@@ -226,7 +228,6 @@ body {
         border: 1px solid $secondary-color;
         border-radius: 10px;
         padding: 40px 20px;
-
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease; // Плавная анимация карточки
 
@@ -273,6 +274,183 @@ body {
             color: $dark-gray;
             line-height: 1.6;
             margin-bottom: 20px;
+        }
+    }
+}
+
+.psychiatry {
+    background-color: $secondary-color;
+    padding: 50px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        color: $primary-color;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 40px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: $primary-color;
+            margin: 10px auto 0;
+        }
+    }
+
+    .psychiatry-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .psychiatry-card {
+        background-color: $white;
+        border: 1px solid $secondary-color;
+        color: $dark-gray;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // Равномерное распределение содержимого
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px; // Равномерный отступ под заголовком
+            color: $primary-color;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0; // Убираем лишние отступы
+            flex-grow: 1; // Равномерное заполнение пространства текстом
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+.about-me {
+    background-color: $light-gray; // Светлый фон секции
+    color: $dark-gray; // Тёмно-серый текст
+    padding: 60px 0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: $primary-color; // Темно-синий заголовок
+
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: $primary-color;
+            margin: 10px auto 0;
+        }
+    }
+
+    .about-me-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .about-me-left,
+        .about-me-right {
+            flex: 1;
+            padding: 15px;
+
+            h3 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                color: $primary-color; // Темно-синий заголовок
+            }
+
+            p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: $dark-gray; // Тёмно-серый текст
+            }
+        }
+
+        .about-me-photo {
+            flex: 0 0 300px;
+            border-radius: 50%; // Круглая форма
+            overflow: hidden; // Скрываем выходящие части
+            margin: 20px auto; // Центрируем фото
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%; // Заполнение контейнера
+                height: 100%;
+                object-fit: cover; // Пропорциональное заполнение
+                object-position: -20px; // По умолчанию центр
+                transform: scale(1.4); // Масштабирование (увеличиваем на 20%)
+                transition: transform 0.3s ease; // Добавляем плавность
+            }
+
+            &:hover img {
+                transform: scale(1.65); // Увеличиваем масштаб при наведении
+            }
+        }
+    }
+
+    .about-me-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+
+        div {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background-color: $white; // Белый фон для блоков
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Лёгкая тень
+
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 10px;
+                color: $primary-color; // Темно-синий заголовок
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                color: $dark-gray; // Тёмно-серый текст
+            }
+
+            strong {
+                color: $primary-color; // Акцент на годах
+            }
         }
     }
 }
